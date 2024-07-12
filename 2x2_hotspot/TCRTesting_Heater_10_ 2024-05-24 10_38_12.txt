@@ -1,0 +1,1 @@
+time,Vsample,Vpowerresistor,Rsample,temperature,power,current,targetvoltage,targetpower,Voltagesupply,dv,pooltemp,integral,powerj,currentj,ljmcurrent,Ro

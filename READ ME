@@ -1,0 +1,54 @@
+HOW TO RUN POOL BOILING EXPERIMENT:
+
+
+BEFORE RUNNING:
+
+1. Let pool of water reach steady state
+2. Measure heater resistance with keithley 2401 using 4 wire sense
+3. Input initial resistance and pool temperature into the AutomatedTesting_bk9116.py file
+4. Fill both upper and lower pool with boiling water
+
+To start:
+
+1. In the terminal, make sure you in the home folder
+2. enter: 
+
+bash AutomatedTesting.sh
+
+WHILE RUNNING:
+
+1. Make sure the lower tank has an adequate amount of water
+2. Keep an eye on the temperature and resistance values on the terminal.
+	~ If temperature is lower than expected (below 100C), shut the system down and restart
+
+TO END:
+
+1. Open file the 'TargetPower'
+
+	~ Enter 0.123123 and save the txt file
+	~ The experiment should end
+2. Shut off the tekpower (gray power supply)
+
+AFTER EXPERIMENT CONCLUDES
+
+1. In the terminal:
+	~ Enter:
+		ps
+	~ You'll see outputs:
+		PID
+		TTY
+		TIME
+		CMD
+	~ Enter:
+		kill [PID associated with CMD PYTHON] 
+	
+	~ Example:
+		~$ ps
+			PID  TTY   TIME  CMD
+			1000 PTS/1 00:00 bash
+			1101 PTS/1 00:00 PYTHON
+			2222 PTS/1 00:00 ps
+		~$ kill 1101
+2. If python doesn't appear in under 'ps', skip this part
+
+	
